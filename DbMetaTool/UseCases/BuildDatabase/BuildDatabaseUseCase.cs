@@ -14,6 +14,7 @@ internal sealed class BuildDatabaseUseCase
     {
         var databaseFileDirectory = CreateDirectory(databaseDirectory);
         var connectionString = CreateDatabase(databaseFileDirectory);
+        Console.WriteLine($"ConnectionString: {connectionString}");
 
         using var connection = new FbConnection(connectionString);
         connection.Open();
