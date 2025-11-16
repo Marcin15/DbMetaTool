@@ -1,0 +1,66 @@
+/******************************************************************************/
+/*                             Stored procedures                              */
+/******************************************************************************/
+
+
+
+SET TERM ^ ;
+
+CREATE PROCEDURE ADD_COMPANY (
+    COMPANY_NAME STRING100 NOT NULL,
+    CITY STRING100,
+    ZIP_CODE STRING6)
+AS
+BEGIN
+  EXIT;
+END^
+
+CREATE PROCEDURE ADD_EMPLOYEE (
+    COMPANY_ID SMALLINT NOT NULL,
+    FIRST_NAME STRING50 NOT NULL,
+    LAST_NAME STRING50 NOT NULL)
+AS
+BEGIN
+  EXIT;
+END
+
+
+
+
+
+SET TERM ; ^
+
+
+
+-- /******************************************************************************/
+-- /*                             Stored procedures                              */
+-- /******************************************************************************/
+
+
+
+SET TERM ^ ;
+
+ALTER PROCEDURE ADD_COMPANY (
+    COMPANY_NAME STRING100 NOT NULL,
+    CITY STRING100,
+    ZIP_CODE STRING6)
+AS
+begin
+  INSERT INTO COMPANIES (NAME, CITY, ZIP_CODE) values (:company_name, :city, :zip_code);
+end^
+
+
+ALTER PROCEDURE ADD_EMPLOYEE (
+    COMPANY_ID SMALLINT NOT NULL,
+    FIRST_NAME STRING50 NOT NULL,
+    LAST_NAME STRING50 NOT NULL)
+AS
+begin
+  INSERT INTO EMPLOYEES (FIRST_NAME, LAST_NAME, COMPANY_ID) values (:first_name, :last_name, :company_id);
+end^
+
+
+
+
+SET TERM ; ^
+

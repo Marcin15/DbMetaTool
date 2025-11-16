@@ -19,3 +19,4 @@ Aplikacja oczekuje nastêpuj¹cych argumentów:
 - `password`: masterkey
 
 W katalogu `Scripts` znajduj¹ siê przyk³adowe skrypty SQL, które mo¿na wykorzystaæ do tworzenia i aktualizacji bazy danych.
+Skrypty powinny byæ uruchamiane w odpowiedniej kolejnoœci, dlatego w nazwie ka¿dego pliku ze skryptami sql nale¿y podaæ numer kolejnoœci uruchamianego skryptu
